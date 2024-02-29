@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Trắc nghiệm</title>
+
+</head>
+
+<body>
+    <div id="quiz">
+        <h1>Hệ thống thi trắc nghiệm</h1>
+        <form id="quizForm">
+            <!-- User information -->
+            <label for="fullName">Họ và tên:</label><br>
+            <input type="text" id="fullName" required><br><br>
+            <label for="dob">Ngày tháng năm sinh:</label><br>
+            <input type="date" id="dob" required><br><br>
+            <label for="studentID">Mã sinh viên:</label><br>
+            <input type="text" id="studentID" required><br><br>
+            <label for="class">Lớp:</label><br>
+            <input type="text" id="class" required><br><br>
+
+            <input type="submit" value="Đăng nhập">
+        </form>
+    </div>
+
+    <!-- Questions -->
+    <div id="questions" class="hidden">
+        <div class="questions-body">
+            <h1>Câu hỏi</h1>
+            <div class="question-group">
+
+                <div class="question">
+                    <h4 class="label-question">1. Mệnh đề này đúng hay sai: 4325 là số nhị phân.</h4><br />
+                    <input class="answer-input" type="radio" id="1" name="group1" value="0">
+                    <label for="1">Đúng</label>
+                    <input class="answer-input" type="radio" id="1" name="group1" value="1">
+                    <label for="1">Sai</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">2. Mệnh đề này đúng hay sai: 110111 là số nhị phân.</h4><br />
+                    <input class="answer-input" type="radio" id="2" name="group2" value="1">
+                    <label for="2">Đúng</label>
+                    <input class="answer-input" type="radio" id="2" name="group2" value="0">
+                    <label for="2">Sai</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">3. Mệnh đề này đúng hay sai: 428888 là số nhị phân.</h4><br />
+                    <input class="answer-input" type="radio" id="3" name="group3" value="0">
+                    <label for="3">Đúng</label>
+                    <input class="answer-input" type="radio" id="3" name="group3" value="1">
+                    <label for="3">Sai</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">4. Mệnh đề này đúng hay sai: 000000001 là số nhị phân.</h4><br />
+                    <input class="answer-input" type="radio" id="4" name="group4" value="1">
+                    <label for="4">Đúng</label>
+                    <input class="answer-input" type="radio" id="4" name="group4" value="0">
+                    <label for="4">Sai</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">5. Mệnh đề này đúng hay sai: 111111111 là số nhị phân.</h4><br />
+                    <input class="answer-input" type="radio" id="5" name="group5" value="1">
+                    <label for="5">Đúng</label>
+                    <input class="answer-input" type="radio" id="5" name="group5" value="0">
+                    <label for="5">Sai</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">6. Mệnh đề này đúng hay sai: 1244314 là số nhị phân.</h4><br />
+                    <input class="answer-input" type="radio" id="6" name="group6" value="0">
+                    <label for="6">Đúng</label>
+                    <input class="answer-input" type="radio" id="6" name="group6" value="1">
+                    <label for="6">Sai</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">7. Mệnh đề này đúng hay sai: 100101010011 là số nhị phân.</h4><br />
+                    <input class="answer-input" type="radio" id="7" name="group7" value="1">
+                    <label for="7">Đúng</label>
+                    <input class="answer-input" type="radio" id="7" name="group7" value="0">
+                    <label for="7">Sai</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">8. Mệnh đề này đúng hay sai: 42424246 là số nhị phân.</h4><br />
+                    <input class="answer-input" type="radio" id="8" name="group8" value="0">
+                    <label for="8">Đúng</label>
+                    <input class="answer-input" type="radio" id="8" name="group8" value="1">
+                    <label for="8">Sai</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">9. Mệnh đề này đúng hay sai: 64767 là số nhị phân.</h4><br />
+                    <input class="answer-input" type="radio" id="9" name="group9" value="0">
+                    <label for="9">Đúng</label>
+                    <input class="answer-input" type="radio" id="9" name="group9" value="1">
+                    <label for="9">Sai</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">10. Mệnh đề này đúng hay sai: 11000 là số nhị phân.</h4><br />
+                    <input class="answer-input" type="radio" id="10" name="group1" value="1">
+                    <span for="10">Đúng</span>
+                    <input class="answer-input" type="radio" id="10" name="group1" value="0">
+                    <span for="10">Sai</span>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <h2 class="label-group">Nhóm 2: Chọn 1 trong 4 đáp án</h2>
+                <div class="question">
+                    <h4 class="label-question">11. Hãy trả lời câu hỏi sau: Ai là người đã lãnh đạo Chiến dịch Điện Biên
+                        Phủ?</h4><br />
+                    <input class="answer-input" type="radio" id="11.1" name="group1" value="0">
+                    <label for="11.1">Hồ Chí Minh</label>
+                    <input class="answer-input" type="radio" id="12.1" name="group1" value="1">
+                    <label for="12.1">Võ Nguyên Giáp</label>
+                    <input class="answer-input" type="radio" id="13.1" name="group1" value="0">
+                    <label for="13.1">Lê Duẩn</label>
+                    <input class="answer-input" type="radio" id="14.1" name="group1" value="0">
+                    <label for="14.1">Võ Văn Kiệt</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">12. Hãy trả lời câu hỏi sau: Năm nào diễn ra Cách mạng tháng Tám tại Việt
+                        Nam?</h4><br />
+                    <input class="answer-input" type="radio" id="12.1" name="group2" value="1">
+                    <label for="12.1">1945</label>
+                    <input class="answer-input" type="radio" id="12.2" name="group2" value="0">
+                    <label for="12.2">1946</label>
+                    <input class="answer-input" type="radio" id="12.3" name="group2" value="0">
+                    <label for="12.3">1947</label>
+                    <input class="answer-input" type="radio" id="12.4" name="group2" value="0">
+                    <label for="12.4">1948</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">13. Hãy trả lời câu hỏi sau: Ai là người đã viết Bình Ngô đại cáo?</h4>
+                    <br />
+                    <input class="answer-input" type="radio" id="13.1" name="group3" value="0">
+                    <label for="13.1">Lê Lợi</label>
+                    <input class="answer-input" type="radio" id="13.2" name="group3" value="0">
+                    <label for="13.2">Lê Thánh Tông</label>
+                    <input class="answer-input" type="radio" id="13.3" name="group3" value="0">
+                    <label for="13.3">Lê Lai</label>
+                    <input class="answer-input" type="radio" id="13.4" name="group3" value="1">
+                    <label for="13.4">Lê Lợi và Nguyễn Trãi</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">14. Hãy trả lời câu hỏi sau: Ai là người đã sáng lập ra Trường Đại học
+                        Quốc gia Hà Nội?</h4><br />
+                    <input class="answer-input" type="radio" id="14.1" name="group4" value="0">
+                    <label for="14.1">Hồ Chí Minh</label>
+                    <input class="answer-input" type="radio" id="14.2" name="group4" value="0">
+                    <label for="14.2">Võ Nguyên Giáp</label>
+                    <input class="answer-input" type="radio" id="14.3" name="group4" value="1">
+                    <label for="14.3">Hoàng Diệu</label>
+                    <input class="answer-input" type="radio" id="14.4" name="group4" value="0">
+                    <label for="14.4">Nguyễn Ái Quốc</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">15. Hãy trả lời câu hỏi sau: Ai là tác giả của "Nhật ký trong tù"?</h4>
+                    <br />
+                    <input class="answer-input" type="radio" id="15.1" name="group5" value="0">
+                    <label for="15.1">Phan Bội Châu</label>
+                    <input class="answer-input" type="radio" id="15.2" name="group5" value="1">
+                    <label for="15.2">Ho Chi Minh</label>
+                    <input class="answer-input" type="radio" id="15.3" name="group5" value="0">
+                    <label for="15.3">Trần Huy Liệu</label>
+                    <input class="answer-input" type="radio" id="15.4" name="group5" value="0">
+                    <label for="15.4">Lê Đức Thọ</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">16. Hãy trả lời câu hỏi sau: Ai là người đã làm nền tảng cho việc phát
+                        triển giáo dục dân tộc?</h4><br />
+                    <input class="answer-input" type="radio" id="16.1" name="group6" value="0">
+                    <label for="16.1">Võ Nguyên Giáp</label>
+                    <input class="answer-input" type="radio" id="16.2" name="group6" value="0">
+                    <label for="16.2">Phan Bội Châu</label>
+                    <input class="answer-input" type="radio" id="16.3" name="group6" value="1">
+                    <label for="16.3">Hồ Chí Minh</label>
+                    <input class="answer-input" type="radio" id="16.4" name="group6" value="0">
+                    <label for="16.4">Trần Huy Liệu</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">17. Hãy trả lời câu hỏi sau: Ai là người đã lãnh đạo cuộc kháng chiến
+                        chống thực dân Pháp tại Việt Nam?</h4><br />
+                    <input class="answer-input" type="radio" id="17.1" name="group7" value="0">
+                    <label for="17.1">Võ Nguyên Giáp</label>
+                    <input class="answer-input" type="radio" id="17.2" name="group7" value="0">
+                    <label for="17.2">Phan Bội Châu</label>
+                    <input class="answer-input" type="radio" id="17.3" name="group7" value="1">
+                    <label for="17.3">Hồ Chí Minh</label>
+                    <input class="answer-input" type="radio" id="17.4" name="group7" value="0">
+                    <label for="17.4">Trần Huy Liệu</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">18. Hãy trả lời câu hỏi sau: Năm nào Chiến dịch Hồ Chí Minh lên quyết
+                        định
+                        thực hiện tiến công vào miền Nam?</h4><br />
+                    <input class="answer-input" type="radio" id="18.1" name="group8" value="0">
+                    <label for="18.1">1973</label>
+                    <input class="answer-input" type="radio" id="18.2" name="group8" value="0">
+                    <label for="18.2">1974</label>
+                    <input class="answer-input" type="radio" id="18.3" name="group8" value="1">
+                    <label for="18.3">1975</label>
+                    <input class="answer-input" type="radio" id="18.4" name="group8" value="0">
+                    <label for="18.4">1976</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">19. Hãy trả lời câu hỏi sau: Ai là người đã sáng lập ra Đảng Cộng sản
+                        Việt
+                        Nam?</h4><br />
+                    <input class="answer-input" type="radio" id="19.1" name="group9" value="0">
+                    <label for="19.1">Võ Nguyên Giáp</label>
+                    <input class="answer-input" type="radio" id="19.2" name="group9" value="1">
+                    <label for="19.2">Hồ Chí Minh</label>
+                    <input class="answer-input" type="radio" id="19.3" name="group9" value="0">
+                    <label for="19.3">Nguyễn Phú Trọng</label>
+                    <input class="answer-input" type="radio" id="19.4" name="group9" value="0">
+                    <label for="19.4">Võ Văn Kiệt</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">20. Hãy trả lời câu hỏi sau: Ai là người đã viết "Tự do"?</h4><br />
+                    <input class="answer-input" type="radio" id="20.1" name="group10" value="1">
+                    <label for="20.1">Hồ Chí Minh</label>
+                    <input class="answer-input" type="radio" id="20.2" name="group10" value="0">
+                    <label for="20.2">Võ Nguyên Giáp</label>
+                    <input class="answer-input" type="radio" id="20.3" name="group10" value="0">
+                    <label for="20.3">Võ Văn Kiệt</label>
+                    <input class="answer-input" type="radio" id="20.4" name="group10" value="0">
+                    <label for="20.4">Trần Huy Liệu</label>
+                </div>
+
+            </div>
+
+
+            <div class="question-group">
+                <h2 class="label-group">Nhóm 3: Chọn nhiều đáp án</h2>
+                <div class="question">
+                    <h4 class="label-question">21. Hãy trả lời câu hỏi sau: Tên tác phẩm nào sau đây được viết bởi
+                        Nguyễn
+                        Du?</h4><br />
+                    <input class="answer-input" type="checkbox" id="21.1" name="group1" value="1">
+                    <label for="21.1">Truyện Kiều</label>
+                    <input class="answer-input" type="checkbox" id="21.2" name="group1" value="1">
+                    <label for="21.2">Kim Vân Kiều truyện</label>
+                    <input class="answer-input" type="checkbox" id="21.3" name="group1" value="0">
+                    <label for="21.3">Lục Vân Tiên</label>
+                    <input class="answer-input" type="checkbox" id="21.4" name="group1" value="0">
+                    <label for="21.4">Tản Đà</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">22. Hãy trả lời câu hỏi sau: Tác phẩm "Chí Phèo" được viết bởi ai?</h4>
+                    <br />
+                    <input class="answer-input" type="checkbox" id="22.1" name="group2" value="1">
+                    <label for="22.1">Nam Cao</label>
+                    <input class="answer-input" type="checkbox" id="22.2" name="group2" value="0">
+                    <label for="22.2">Nguyễn Hồng</label>
+                    <input class="answer-input" type="checkbox" id="22.3" name="group2" value="0">
+                    <label for="22.3">Vũ Trọng Phụng</label>
+                    <input class="answer-input" type="checkbox" id="22.4" name="group2" value="0">
+                    <label for="22.4">Thạch Lam</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">23. Hãy trả lời câu hỏi sau: Tên tác phẩm nào sau đây được viết bởi Nam
+                        Cao?</h4><br />
+                    <input class="answer-input" type="checkbox" id="23.1" name="group3" value="1">
+                    <label for="23.1">Chí Phèo</label>
+                    <input class="answer-input" type="checkbox" id="23.2" name="group3" value="1">
+                    <label for="23.2">Lão Hạc</label>
+                    <input class="answer-input" type="checkbox" id="23.3" name="group3" value="0">
+                    <label for="23.3">Dế Mèn Phiêu Lưu Ký</label>
+                    <input class="answer-input" type="checkbox" id="23.4" name="group3" value="0">
+                    <label for="23.4">Tắt Đèn</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">24. Hãy trả lời câu hỏi sau: Tác phẩm "Số Đỏ" được viết bởi ai?</h4>
+                    <br />
+                    <input class="answer-input" type="checkbox" id="24.1" name="group4" value="0">
+                    <label for="24.1">Nam Cao</label>
+                    <input class="answer-input" type="checkbox" id="24.2" name="group4" value="0">
+                    <label for="24.2">Nguyễn Hồng</label>
+                    <input class="answer-input" type="checkbox" id="24.3" name="group4" value="1">
+                    <label for="24.3">Vũ Trọng Phụng</label>
+                    <input class="answer-input" type="checkbox" id="24.4" name="group4" value="0">
+                    <label for="24.4">Thạch Lam</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">25. Hãy trả lời câu hỏi sau: Ai là tác giả của "Dế Mèn Phiêu Lưu Ký"?
+                    </h4>
+                    <br />
+                    <input class="answer-input" type="checkbox" id="25.1" name="group5" value="0">
+                    <label for="25.1">Nam Cao</label>
+                    <input class="answer-input" type="checkbox" id="25.2" name="group5" value="0">
+                    <label for="25.2">Nguyễn Hồng</label>
+                    <input class="answer-input" type="checkbox" id="25.3" name="group5" value="0">
+                    <label for="25.3">Vũ Trọng Phụng</label>
+                    <input class="answer-input" type="checkbox" id="25.4" name="group5" value="1">
+                    <label for="25.4">Tô Hoài</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">26. Hãy trả lời câu hỏi sau: Tên tác phẩm nào sau đây được viết bởi Vũ
+                        Trọng Phụng?</h4><br />
+                    <input class="answer-input" type="checkbox" id="26.1" name="group6" value="1">
+                    <label for="26.1">Số Đỏ</label>
+                    <input class="answer-input" type="checkbox" id="26.2" name="group6" value="1">
+                    <label for="26.2">Đất Lửa</label>
+                    <input class="answer-input" type="checkbox" id="26.3" name="group6" value="0">
+                    <label for="26.3">Lão Hạc</label>
+                    <input class="answer-input" type="checkbox" id="26.4" name="group6" value="0">
+                    <label for="26.4">Lão Tử Sáng Tạo</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">27. Hãy trả lời câu hỏi sau: Ai là tác giả của "Tắt Đèn"?</h4><br />
+                    <input class="answer-input" type="checkbox" id="27.1" name="group7" value="0">
+                    <label for="27.1">Nam Cao</label>
+                    <input class="answer-input" type="checkbox" id="27.2" name="group7" value="0">
+                    <label for="27.2">Nguyễn Hồng</label>
+                    <input class="answer-input" type="checkbox" id="27.3" name="group7" value="0">
+                    <label for="27.3">Vũ Trọng Phụng</label>
+                    <input class="answer-input" type="checkbox" id="27.4" name="group7" value="1">
+                    <label for="27.4">Ngô Tất Tố</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">28. Hãy trả lời câu hỏi sau: Tên tác phẩm nào sau đây được viết bởi Tô
+                        Hoài?</h4><br />
+                    <input class="answer-input" type="checkbox" id="28.1" name="group8" value="1">
+                    <label for="28.1">Dế Mèn Phiêu Lưu Ký</label>
+                    <input class="answer-input" type="checkbox" id="28.2" name="group8" value="0">
+                    <label for="28.2">Chí Phèo</label>
+                    <input class="answer-input" type="checkbox" id="28.3" name="group8" value="0">
+                    <label for="28.3">Số Đỏ</label>
+                    <input class="answer-input" type="checkbox" id="28.4" name="group8" value="0">
+                    <label for="28.4">Tắt Đèn</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">29. Hãy trả lời câu hỏi sau: Tên tác phẩm nào sau đây được viết bởi Thạch
+                        Lam?</h4><br />
+                    <input class="answer-input" type="checkbox" id="29.1" name="group9" value="1">
+                    <label for="29.1">2 đứa trẻ</label>
+                    <input class="answer-input" type="checkbox" id="29.2" name="group9" value="0">
+                    <label for="29.2">Số Đỏ</label>
+                    <input class="answer-input" type="checkbox" id="29.3" name="group9" value="0">
+                    <label for="29.3">Tắt Đèn</label>
+                    <input class="answer-input" type="checkbox" id="29.4" name="group9" value="0">
+                    <label for="29.4">Lão Hạc</label>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">30. Hãy trả lời câu hỏi sau: Ai là tác giả của "Lão Hạc"?</h4><br />
+                    <input class="answer-input" type="checkbox" id="30.1" name="group10" value="1">
+                    <label for="30.1">Nam Cao</label>
+                    <input class="answer-input" type="checkbox" id="30.2" name="group10" value="0">
+                    <label for="30.2">Nguyễn Hồng</label>
+                    <input class="answer-input" type="checkbox" id="30.3" name="group10" value="0">
+                    <label for="30.3">Vũ Trọng Phụng</label>
+                    <input class="answer-input" type="checkbox" id="30.4" name="group10" value="0">
+                    <label for="30.4">Thạch Lam</label>
+                </div>
+
+            </div>
+
+
+            <div class="question-group">
+                <h2 class="label-group">Nhóm 4: Trả lời tự luận</h2>
+                <div class="question">
+                    <h4 class="label-question">31. Hãy trả lời câu hỏi sau: Trình bày cấu trúc địa hình của Việt Nam và
+                        giải thích ảnh hưởng của nó đối với phong cảnh và nền kinh tế.</h4><br />
+                    <textarea id="1" name="group1" placeholder="Nhập câu trả lời của bạn"></textarea>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">32. So sánh và đối chiếu giữa hệ thống sông chính ở Bắc, Trung và Nam của
+                        Việt Nam và ý nghĩa của chúng đối với nền kinh tế và văn hóa.</h4><br />
+                    <textarea id="2" name="group2" placeholder="Nhập câu trả lời của bạn"></textarea>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">33. Trình bày về hệ thống đảo và vị trí địa lý của các quần đảo lớn ở
+                        Việt
+                        Nam như quần đảo Hoàng Sa và quần đảo Trường Sa.</h4><br />
+                    <textarea id="3" name="group3" placeholder="Nhập câu trả lời của bạn"></textarea>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">34. Phân tích và so sánh về sự đa dạng sinh học giữa các khu vực địa lý
+                        khác nhau của Việt Nam.</h4><br />
+                    <textarea id="4" name="group4" placeholder="Nhập câu trả lời của bạn"></textarea>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">35. Giải thích vai trò của các vùng đất ngập nước như đồng bằng sông Cửu
+                        Long và đồng bằng sông Hồng đối với nền kinh tế và cuộc sống hàng ngày của người dân.</h4><br />
+                    <textarea id="5" name="group5" placeholder="Nhập câu trả lời của bạn"></textarea>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">36. Trình bày về vị trí chiến lược của Việt Nam trong khu vực Đông Nam Á
+                        và ảnh hưởng của nó đối với an ninh và phát triển kinh tế của quốc gia.</h4><br />
+                    <textarea id="6" name="group6" placeholder="Nhập câu trả lời của bạn"></textarea>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">37. Nêu và phân tích các vấn đề môi trường chính ở Việt Nam và những biện
+                        pháp cần thiết để bảo vệ và bảo tồn môi trường.</h4><br />
+                    <textarea id="7" name="group7" placeholder="Nhập câu trả lời của bạn"></textarea>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">38. So sánh và đối chiếu giữa hệ thống giao thông ở Việt Nam với các quốc
+                        gia khác trong khu vực và ý nghĩa của nó đối với phát triển kinh tế và xã hội.</h4><br />
+                    <textarea id="8" name="group8" placeholder="Nhập câu trả lời của bạn"></textarea>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">39. Đánh giá vai trò của nguồn tài nguyên tự nhiên như dầu khí, khoáng
+                        sản, và năng lượng tái tạo trong phát triển kinh tế của Việt Nam và ảnh hưởng của nó đối với môi
+                        trường và xã hội.</h4><br />
+                    <textarea id="9" name="group9" placeholder="Nhập câu trả lời của bạn"></textarea>
+                </div>
+
+                <div class="question">
+                    <h4 class="label-question">40. Trình bày về các vấn đề liên quan đến biển Đông và vai trò của Việt
+                        Nam trong vấn đề này.</h4><br />
+                    <textarea id="10" name="group10" placeholder="Nhập câu trả lời của bạn"></textarea>
+                </div>
+
+
+            </div>
+            <div class="submit-btn">
+                <input class="submit-exam" type="submit" value="Nộp bài">
+            </div>
+        </div>
+    </div>
+    <div id="result" class="hidden1">
+        <h2 class="result-user"></h2>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
