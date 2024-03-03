@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">
+                <image class="img-logo" src="/ptit-logo.png"></image>
+            </a>
+            <ul class="nav-links">
+                <!-- <li><a href="/login/login.html" id="link1">Đăng nhập</a></li> -->
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h2>Dashboard Admin</h2>
+
+        <h3>Quản lý danh sách các kỳ thi</h3>
+        <button onclick="renderNewHTML('./chinhSua/index.html')">Thêm mới</button>
+        <table id="tableKyThi">
+            <tr>
+                <th>ID</th>
+                <th>Tên kỳ thi</th>
+                <th>Chỉnh sửa</th>
+                <th>Xóa</th>
+            </tr>
+        </table>
+
+        <h3>Quản lý danh sách người dùng</h3>
+        <button onclick="themMoiNguoiDung()">Thêm mới</button>
+        <table id="tableNguoiDung">
+            <tr>
+                <th>ID</th>
+                <th>Tên người dùng</th>
+                <th>Chỉnh sửa</th>
+                <th>Xóa</th>
+            </tr>
+        </table>
+
+        <h3>Xem thống kê</h3>
+
+        <div id="thongKe"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+    <script>
+        function renderNewHTML(url) {
+            // Đoạn code này sẽ chuyển hướng người dùng đến trang HTML mới
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>

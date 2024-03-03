@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Tạo/Chỉnh sửa Kỳ thi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">
+                <image class="img-logo" src="/ptit-logo.png"></image>
+            </a>
+            <ul class="nav-links">
+                <!-- <li><a href="/login/login.html" id="link1">Đăng nhập</a></li> -->
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h2>Trang Tạo/Chỉnh sửa Kỳ thi</h2>
+        <form id="kyThiForm">
+            <label for="tenKyThi">Tên kỳ thi:</label>
+            <input type="text" id="tenKyThi" name="tenKyThi" required><br><br>
+
+            <label for="moTa">Mô tả:</label><br>
+            <textarea id="moTa" name="moTa" rows="4" cols="50"></textarea><br><br>
+
+            <label for="loaiKyThi">Loại kỳ thi:</label>
+            <select id="loaiKyThi" name="loaiKyThi">
+                <option value="tuDo">Tự do</option>
+                <option value="45Phut">Giữa kỳ</option>
+                <option value="60Phut">Cuối kỳ</option>
+            </select><br><br>
+
+            <h3>Danh sách câu hỏi</h3>
+            <div id="danhSachCauHoi">
+                <!-- Các câu hỏi sẽ được thêm vào đây bằng JavaScript -->
+            </div>
+
+            <button type="button" onclick="themCauHoi()">Thêm câu hỏi</button><br><br>
+
+            <button type="submit">Lưu</button>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
