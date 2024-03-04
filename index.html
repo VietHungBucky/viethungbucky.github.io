@@ -17,7 +17,8 @@
                 <image class="img-logo" src="/ptit-logo.png"></image>
             </a>
             <ul class="nav-links">
-                <li><a href="/login/login.html" id="link1">Đăng nhập</a></li>
+                <li><a href="/login-user/login.html" id="link1">Đăng nhập</a></li>
+                <li><a href="/login/login.html" id="link1">Đăng nhập admin</a></li>
             </ul>
         </div>
     </nav>
@@ -26,9 +27,9 @@
         <h1>Chào mừng đến với hệ thống thi trắc nghiệm PTIT</h1>
         <input type="text" id="myInput" placeholder="Nhập tên môn...">
         <button class="action-button">Tìm kiếm</button>
-        <div class=" exam-body">
+        <div class="exam-body">
             <table class="custom-table">
-                <thead>
+                <!-- <thead>
                     <tr>
                         <th>Tên môn</th>
                         <th>Kì thi</th>
@@ -94,12 +95,11 @@
                         <td><button class="action-button" onclick="renderNewHTML('./exam/exam.html')">Làm bài</button>
                         </td>
                     </tr>
-                    <!-- Thêm các hàng khác tương tự tại đây -->
-                </tbody>
+                </tbody> -->
             </table>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="main.js"></script>
     <script>
         function renderNewHTML(url) {
             // Đoạn code này sẽ chuyển hướng người dùng đến trang HTML mới

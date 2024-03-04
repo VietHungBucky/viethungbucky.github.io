@@ -1,3 +1,11 @@
+:root {
+    --main-color: #AD171C;
+}
+
+h2 {
+    color: var(--main-color);
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;

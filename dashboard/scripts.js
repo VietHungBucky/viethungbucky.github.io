@@ -1,25 +1,26 @@
 var kyThiData = [
-    { id: 1, ten: "Giữa kỳ 2 - Năm 2022-2023" },
-    { id: 2, ten: "Cuối kỳ 2 - Năm 2022-2023" },
-    { id: 3, ten: "Giữa kỳ 1 - Năm 2023-2024" }
+    { id: 1, ten: "Nhập môn công nghệ phần mềm" },
+    { id: 2, ten: "Lập trình website" },
+    { id: 3, ten: "Lập trình hướng đối tượng" }
 ];
 
 var nguoiDungData = [
-    { id: 1, ten: "Nguyễn Văn Nam - B21DCCN123" },
-    { id: 2, ten: "Nguyễn Văn Đức - B21DCCN563" },
-    { id: 3, ten: "Nguyễn Thị Nữ - B21DCCN125" }
+    { id: 1, ten: "Nguyễn Văn A - B21DCCN123" },
+    { id: 2, ten: "Nguyễn Văn B - B21DCCN563" },
+    { id: 3, ten: "Nguyễn Thị C - B21DCCN125" }
 ];
 
 var thongKeData = [
-    { tenKyThi: "Kỳ thi 1", soLuongNguoiDung: 10, tyLeHoanThanh: 70, diemTrungBinh: 8.5 },
-    { tenKyThi: "Kỳ thi 2", soLuongNguoiDung: 15, tyLeHoanThanh: 60, diemTrungBinh: 7.8 }
+    { tenKyThi: "Nhập môn công nghệ phần mềm", soLuongNguoiDung: 10, tyLeHoanThanh: 70, diemTrungBinh: 8.5 },
+    { tenKyThi: "Lập trình website", soLuongNguoiDung: 15, tyLeHoanThanh: 60, diemTrungBinh: 7.8 },
+    { tenKyThi: "Lập trình hướng đối tượng", soLuongNguoiDung: 10, tyLeHoanThanh: 70, diemTrungBinh: 8.4 },
 ];
 
 function hienThiDanhSachKyThi() {
     var table = document.getElementById("tableKyThi");
     table.innerHTML = "<tr><th>ID</th><th>Tên kỳ thi</th><th>Chỉnh sửa</th><th>Xóa</th></tr>";
     kyThiData.forEach(function (kyThi) {
-        var row = "<tr><td>" + kyThi.id + "</td><td>" + kyThi.ten + "</td><td><button>Chỉnh sửa</button></td><td><button>Xóa</button></td></tr>";
+        var row = "<tr><td>" + kyThi.id + "</td><td>" + kyThi.ten + `</td><td><button onclick="renderNewHTML('./chinhSua/index.html')">Chỉnh sửa</button></td><td><button>Xóa</button></td></tr>`;
         table.innerHTML += row;
     });
 }

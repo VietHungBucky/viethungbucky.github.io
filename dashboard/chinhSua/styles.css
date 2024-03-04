@@ -112,3 +112,17 @@ button:hover {
     margin-bottom: 10px;
     border-radius: 5px;
 }
+
+#titleInput {
+    margin-left: 400px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#fileInput {
+    margin-left: 400px;
+}
+
+.footer {
+    display: flex;
+}
